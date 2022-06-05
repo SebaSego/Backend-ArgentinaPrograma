@@ -40,7 +40,7 @@ public class Persona {
      */
 
     //Relacion con Entidad o tabla Educacion
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
     private Collection<Educacion> educacion;
 
 
