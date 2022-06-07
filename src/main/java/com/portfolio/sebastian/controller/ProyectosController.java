@@ -28,7 +28,7 @@ public class ProyectosController {
     }
 
     @DeleteMapping ("/delete/{id}")
-    public void borrarProyectos (@PathVariable Long id){
+    public void borrarProyectos (@PathVariable (name = "id") Long id){
 
         proyServ.borrarProyectos(id);
     }

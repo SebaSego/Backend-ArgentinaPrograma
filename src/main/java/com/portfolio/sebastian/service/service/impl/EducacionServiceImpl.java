@@ -38,7 +38,10 @@ public class EducacionServiceImpl implements IEducacionService {
     }
 
     @Override
-    public void borrarEducacion(Long id) {
+    public void borrarEducacion(Long id)
+    {
+        Persona persona=persoRepo.findAll().get(0);
+        persona.getEducacion().remove(this.buscarEducacion(id));
         eduRepo.deleteById(id);
     }
 

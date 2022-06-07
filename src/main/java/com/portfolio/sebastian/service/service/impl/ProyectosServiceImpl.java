@@ -30,20 +30,12 @@ public class ProyectosServiceImpl implements IProyectosService {
     }
 
     @Override
-    public void borrarUnProyecto(Long id) {
-        proyRepo.deleteById(id);
-    }
-    @Override
     public void borrarProyectos(Long id) {
         Persona persona=persoRepo.findAll().get(0);
-        persona.getProyectos().remove(proyRepo.findById(id));
-        persona.setProyectos(persona.getProyectos());
-        persoRepo.save(persona);
+        persona.getProyectos().remove(this.buscarProyectos(id));
+        proyRepo.deleteById(id);
 
-        //proyRepo.deleteById(id);
     }
-
-
 
     @Override
     public Proyectos buscarProyectos(Long id) {

@@ -13,7 +13,7 @@ public interface IProyectosService {
 
     public void borrarProyectos (Long id);
 
-    public void borrarUnProyecto (Long id);
+
 
     public Proyectos buscarProyectos (Long id);
 }
