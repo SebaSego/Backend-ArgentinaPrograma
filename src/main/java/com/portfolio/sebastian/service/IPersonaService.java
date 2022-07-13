@@ -1,15 +1,17 @@
 package com.portfolio.sebastian.service;
 
 import com.portfolio.sebastian.model.Persona;
-import java.util.List;
+
 
 public interface IPersonaService {
     
-    public List<Persona> verPersonas();
+    public Persona verPersona(Long id);
 
     public void crearPersona (Persona per);
+
+    public void modifPersona (Persona per);
     
     public void borrarPersona (Long id);
     
-    public Persona buscarPersona (Long id);
+
 }

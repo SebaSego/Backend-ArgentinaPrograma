@@ -11,6 +11,7 @@ import com.portfolio.sebastian.service.IPersonaService;
 
 @RestController
 @RequestMapping("/persona")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     
    @Autowired
@@ -23,11 +24,17 @@ public class PersonaController {
     }
 
     
-    @GetMapping ("/ver")
+    @GetMapping ("/ver/{id}")
     @ResponseBody
-    public List<Persona> verPersonas(){
+    public Persona verPersona(@PathVariable Long id){
 
-        return persoServ.verPersonas();
+        return persoServ.verPersona(id);
+    }
+
+    @PutMapping ("/actualizar") //primero hay que traer la persona para que me actualice con todas las entidades relacionadas, sino elimina todo
+    public void modifPersona (@RequestBody Persona pers){
+
+        persoServ.modifPersona(pers);
     }
     
     

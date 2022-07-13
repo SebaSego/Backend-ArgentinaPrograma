@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @RequestMapping("/educacion")
+@CrossOrigin(origins = "http://localhost:4200")
 public class EducacionController {
 
     @Autowired
@@ -21,8 +22,8 @@ public class EducacionController {
         eduServ.crearEducacion(educacion);
     }
 
-    @PostMapping("/modificar")
-    public void modificarEducaicon(@RequestBody Educacion educacion){
+    @PutMapping("/modificar")
+    public void modificarEducacion(@RequestBody Educacion educacion){
         eduServ.modificarEducacion(educacion);
     }
 

@@ -18,10 +18,10 @@ public class Educacion {
     private Long id;
     private String titulo;
     private String institucion;
-    private String anio_inicio;
-    private String anio_fin;
+    private String anioInicio;
+    private String anioFin;
     private String detalle;
-    private String url_imagen;
+    private String urlImagen;
 
 
 

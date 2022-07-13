@@ -17,8 +17,8 @@ public class PersonaService implements IPersonaService{
     
     
     @Override
-    public List<Persona> verPersonas() {
-        return persoRepo.findAll();
+    public Persona verPersona(Long id) {
+        return persoRepo.findById(id).orElse(null);
     }
 
     @Override
@@ -27,13 +27,17 @@ public class PersonaService implements IPersonaService{
     }
 
     @Override
+    public void modifPersona(Persona per) {
+
+        persoRepo.save(per);
+    }
+
+
+    @Override
     public void borrarPersona(Long id) {
         persoRepo.deleteById(id);
     }
 
-    @Override
-    public Persona buscarPersona(Long id) {
-        return persoRepo.findById(id).orElse(null);
-    }
+
 
 }
