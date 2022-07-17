@@ -31,6 +31,11 @@ public class ExperienciaServiceImpl implements IExperienciaService {
     }
 
     @Override
+    public void modificarExperiencia(Experiencia experiencia) {
+        expRepo.save(experiencia);
+    }
+
+    @Override
     public void borrarExperiencia(Long id)
     {
         Persona persona=persoRepo.findAll().get(0);

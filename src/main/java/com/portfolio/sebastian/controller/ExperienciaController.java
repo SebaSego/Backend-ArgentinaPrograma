@@ -1,5 +1,6 @@
 package com.portfolio.sebastian.controller;
 
+import com.portfolio.sebastian.model.Educacion;
 import com.portfolio.sebastian.model.Experiencia;
 import com.portfolio.sebastian.model.Persona;
 import com.portfolio.sebastian.service.IExperienciaService;
@@ -28,7 +29,10 @@ public class ExperienciaController {
         return expServ.verExperiencia();
     }
 
-
+    @PutMapping("/modificar")
+    public void modificarExperiencia(@RequestBody Experiencia experiencia){
+        expServ.modificarExperiencia(experiencia);
+    }
     @DeleteMapping ("/delete/{id}")
     public void borrarExperiencia (@PathVariable Long id){
 

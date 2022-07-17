@@ -31,7 +31,7 @@ public class Persona {
     @Column(name="telefono")
     private String telefono;
     @Column(name="urlImagen")
-    private String urlImagen;
+    private String urlImg;
 
     /*
     //Relacion con Entidad o tabla Usuario
