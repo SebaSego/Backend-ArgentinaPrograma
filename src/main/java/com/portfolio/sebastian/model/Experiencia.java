@@ -18,15 +18,15 @@ public class Experiencia {
     @Column(name="puesto")
     private String puesto;
     @Column(name="institucion")
-    private String institucion;
+    private String institucionExp;
     @Column(name="anioInicio")
-    private int anioInicio;
+    private int anioInicioExp;
     @Column(name="anioFin")
-    private int anioFin;
+    private int anioFinExp;
     @Column(name="ciudad")
     private String ciudad;
     @Column(name="detalle")
-    private String detalle;
+    private String detalleExp;
     @Column(name="urlLogoEmpresa")
     private String urlLogoEmpresa;
 
