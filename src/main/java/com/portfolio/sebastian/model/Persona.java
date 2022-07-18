@@ -58,8 +58,8 @@ public class Persona {
     private List<Ubicacion> ubicacion;
 
     //Relacion con Entidad o tabla Redes Sociales
-    @OneToMany(cascade = CascadeType.PERSIST)
-    private List<RedesSociales> redes_sociales;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Collection<RedesSociales> redesSociales;
 
     /*
 

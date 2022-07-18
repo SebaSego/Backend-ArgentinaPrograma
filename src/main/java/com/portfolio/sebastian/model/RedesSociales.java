@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name="redes_sociales")
+@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,7 +21,7 @@ public class RedesSociales {
     @Column(name="link")
     private String link;
     @Column(name="urlLogo")
-    private String urlLogo;
+    private String urlLogoRed;
 
 
 
