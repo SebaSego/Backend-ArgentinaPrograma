@@ -53,13 +53,14 @@ public class Persona {
     @OneToMany(cascade = CascadeType.ALL)
     private Collection<Proyectos> proyectos;
 
-    //Relacion con Entidad o tabla Ubicacion
-    @OneToMany(cascade = CascadeType.PERSIST)
-    private List<Ubicacion> ubicacion;
+
 
     //Relacion con Entidad o tabla Redes Sociales
     @OneToMany(cascade = CascadeType.ALL)
     private Collection<RedesSociales> redesSociales;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Collection<Habilidades> habilidades;
 
     /*
 
