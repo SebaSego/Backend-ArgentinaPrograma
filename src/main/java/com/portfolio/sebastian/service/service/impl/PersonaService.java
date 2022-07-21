@@ -1,14 +1,16 @@
-package com.portfolio.sebastian.service;
+package com.portfolio.sebastian.service.service.impl;
 
 import com.portfolio.sebastian.model.Persona;
 import java.util.List;
+
+import com.portfolio.sebastian.service.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.portfolio.sebastian.repository.PersonaRepository;
 
 
 @Service
-public class PersonaService implements IPersonaService{
+public class PersonaService implements IPersonaService {
 
     
     @Autowired
