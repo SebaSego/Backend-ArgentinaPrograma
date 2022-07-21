@@ -21,7 +21,7 @@ public class Habilidades {
     @Column(name="descripcion")
     private String descripcion;
     @Column(name="progreso")
-    private Integer progreso;
+    private Long progreso;
     @Column(name="imagen")
     private String imagen;
 
