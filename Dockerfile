@@ -1,4 +1,4 @@
-FROM amazoncorretto:19
+FROM open-18-jdk-focal
 MAINTAINER SebaSegovia
 COPY target/SpringBoot.jar back.jar
 ENTRYPOINT ["java","-jar","/back.jar"]
