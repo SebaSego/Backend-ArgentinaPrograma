@@ -1,6 +1,6 @@
 FROM amazoncorretto:19
 MAINTAINER SebaSegovia
-COPY target/SpringBoot.jar SringBoot.jar
-ENTRYPOINT ["java","-jar","/SpringBoot.jar"]
+COPY target/SpringBoot.jar back.jar
+ENTRYPOINT ["java","-jar","/back.jar"]
 
 
