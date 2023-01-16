@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/habilidades")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class HabilidadesController {
     @Autowired
     private IHabilidadesService habilServ;
